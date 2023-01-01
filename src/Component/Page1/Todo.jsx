@@ -16,7 +16,9 @@ export default function Todo() {
   }
   const handleUpdateList = (val) => {
     val["status"] = false
-    setData([...data, {...val,id:uuidv4(),subTask:[]}])
+    data=[...data, { ...val, id: uuidv4(), subTask: [] }]
+    setData([...data]);
+    
     setSearchList([...data])
 }
 const searchElementFunction=(val)=>{
